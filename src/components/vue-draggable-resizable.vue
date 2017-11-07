@@ -191,7 +191,7 @@ export default {
         if (!this.enabled) {
           this.enabled = true
 
-          this.$emit('activated', this.z)
+          this.$emit('activated', this.left, this.top, this.width, this.height)
           this.$emit('update:active', true)
         }
 
@@ -208,7 +208,7 @@ export default {
         if (this.enabled) {
           this.enabled = false
 
-          this.$emit('deactivated', this.z)
+          this.$emit('deactivated', this.left, this.top, this.width, this.height)
           this.$emit('update:active', false)
         }
       }
